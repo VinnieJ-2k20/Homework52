@@ -9,11 +9,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-/* 2. Напишите программу, которая примет на вход два
-текстовых файла, а вернет один. Содержимым этого файла
-должны быть слова, которые одновременно есть и в первом и
-во втором файле. */
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -26,9 +21,10 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		writeToFile(combined, selectCommonWords(separateWords(readFileToString(source1)), separateWords(readFileToString(source2))));
-		
+
+		writeToFile(combined,
+				selectCommonWords(separateWords(readFileToString(source1)), separateWords(readFileToString(source2))));
+
 	}
 
 	public static String readFileToString(File input) {
